@@ -15,14 +15,12 @@ Some of the key features that make Adity's Alarm stand out include:
 Team
 Meet the team behind Adity's Alarm:
 
-- Adity: Founder and Developer
+- Aditya: Founder and Developer
 
 Contact Us
 We'd love to hear from you! If you have any questions, feedback, or suggestions, please don't hesitate to reach out to us at:
 
-- Email: [your email]
-- Twitter: [your Twitter handle]
-- Facebook: [your Facebook page]
+- Email: adisharma3030@gmail.com
 
 Version History
 - Version 1.0: Initial release with core features and functionality.
