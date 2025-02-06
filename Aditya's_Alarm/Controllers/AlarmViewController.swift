@@ -122,6 +122,7 @@ extension AlarmViewController: UITableViewDataSource {
     // 2️⃣ Number of rows in a section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return times.count
+        // technican git check
     }
     
     // 3️⃣ Provide a cell for a row (required)
