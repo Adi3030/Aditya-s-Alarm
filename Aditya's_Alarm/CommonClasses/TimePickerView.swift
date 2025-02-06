@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TimePickerViewDelegate: AnyObject {
-    func didSelectTime(hour: String, minutes: String, amPm: String)
+    func didSelectTime(hour: String, minutes: String, amPm: String, isActive: Bool)
     func didCancelSelection()
 }
 
@@ -42,7 +42,7 @@ class TimePickerView: UIView, UITextFieldDelegate {
         let textField = UITextField()
         textField.placeholder = "HH"
         textField.textAlignment = .center
-        textField.font = UIFont.systemFont(ofSize: 18)
+        textField.font = UIFont.systemFont(ofSize: 30)
         textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.gray.cgColor
@@ -53,7 +53,7 @@ class TimePickerView: UIView, UITextFieldDelegate {
     private let colonLabel: UILabel = {
         let label = UILabel()
         label.text = ":"
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
     
@@ -61,7 +61,7 @@ class TimePickerView: UIView, UITextFieldDelegate {
         let textField = UITextField()
         textField.placeholder = "MM"
         textField.textAlignment = .center
-        textField.font = UIFont.systemFont(ofSize: 18)
+        textField.font = UIFont.systemFont(ofSize: 30)
         textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.gray.cgColor
@@ -145,8 +145,8 @@ class TimePickerView: UIView, UITextFieldDelegate {
             stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
             stackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             
-            hourTextField.widthAnchor.constraint(equalToConstant: 50),
-            minuteTextField.widthAnchor.constraint(equalToConstant: 50),
+            hourTextField.widthAnchor.constraint(equalToConstant: 65),
+            minuteTextField.widthAnchor.constraint(equalToConstant: 65),
             
             amPmSegment.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
             amPmSegment.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
@@ -168,16 +168,12 @@ class TimePickerView: UIView, UITextFieldDelegate {
             print("Invalid time entered")
             hourTextField.resignFirstResponder()
             minuteTextField.resignFirstResponder()
-            showToast(message: "aPlease enter a valid time")
+            showToast(message: "Please enter a valid time")
             
             return
         }
-        
         let amPm = amPmSegment.selectedSegmentIndex == 0 ? "AM" : "PM"
-        delegate?.didSelectTime(hour: hourText, minutes: minuteText, amPm: amPm)
-        saveTimeToCoreData(hour: hourText, minute: minuteText, amPm: amPm)
-        // Reload table view (you'll fetch the data again)
-         
+        delegate?.didSelectTime(hour: hourText, minutes: minuteText, amPm: amPm, isActive: true)
         self.removeFromSuperview()
     }
     
