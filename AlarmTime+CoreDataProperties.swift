@@ -2,7 +2,7 @@
 //  AlarmTime+CoreDataProperties.swift
 //  Aditya's_Alarm
 //
-//  Created by aditya sharma on 06/02/25.
+//  Created by aditya sharma on 22/02/25.
 //
 //
 
@@ -18,8 +18,9 @@ extension AlarmTime {
 
     @NSManaged public var amPm: String?
     @NSManaged public var hour: String?
-    @NSManaged public var minute: String?
     @NSManaged public var isActive: Bool
+    @NSManaged public var minute: String?
+    @NSManaged public var id: UUID?
 
 }
 
