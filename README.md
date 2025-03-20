@@ -28,7 +28,7 @@ Version History
 - Version 1.2: New features and improvements based on user feedback.
 
 Disclaimer
-By using Adity's Alarm, you agree to our terms of use and privacy policy. We're committed to protecting your data and ensuring a secure user experience.
+By using Aditya's Alarm, you agree to our terms of use and privacy policy. We're committed to protecting your data and ensuring a secure user experience.
 
 I hope this helps! Let me know if you need any further modifications.
 
