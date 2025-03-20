@@ -1,4 +1,4 @@
-About Adity's Alarm
+About Aditya's Alarm
 Welcome to Adity's Alarm, your reliable and feature-rich alarm clock app. We're committed to helping you start your day on time and on a positive note.
 
 Our Mission
